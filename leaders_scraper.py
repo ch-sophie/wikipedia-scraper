@@ -62,6 +62,7 @@ class wikipediaScraper:
             for leader in leaders:
                 if leader.get("wikipedia_url"):
                     leader['first_paragraph'] = self.get_first_paragraph(leader['wikipedia_url'])
+                    time.sleep(0.1)
             self.leaders_data[country] = leaders
 
     def to_json_file(self, filepath):
