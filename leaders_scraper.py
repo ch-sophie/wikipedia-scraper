@@ -50,7 +50,7 @@ class wikipediaScraper:
             for p in soup.find_all('p'):
                 if p.find('b'):
                     text = p.get_text() #extract text from p
-                    #sanitisation
+                    #sanitisation regex
                     text = re.sub(r'\[.*?\]', '', text) #citations [1]
                     for _ in range(2):
                         text = re.sub(r'\s*\([^()]*\)', '', text) #parentheses and double parentheses
