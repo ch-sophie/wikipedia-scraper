@@ -19,14 +19,10 @@ More specifically, in this project we will query an API to obtain a list of coun
 - Use [venv](https://docs.python.org/3/library/venv.html) to isolate the Python environment
 - Use [requests](https://requests.readthedocs.io/en/latest/) to call an external API on any internet link
 - Use [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/) to extract text from HTML
-- Get comfortable with JSON 
-- (_Optional_) Use OOP to split functionalities into classes and methods
-- (_Optional_) Use regex to clean text data
-- (_Optional_) Use multiprocessing to speedup your code
 
 ## The Mission
 
-Create a scraper that builds a JSON file with the political leaders of each country I get from [this API](https://country-leaders.onrender.com/docs).
+Create a scraper that builds a JSON file with the political leaders of each country from [this API](https://country-leaders.onrender.com/docs).
 
 Include in this file the first paragraph of the Wikipedia page of these leaders.
 
@@ -41,19 +37,9 @@ Include in this file the first paragraph of the Wikipedia page of these leaders.
 - A switch to store the output as CSV instead of JSON
 - Speed up the execution using multiprocessing
 
-### Steps
+#### Steps
 
-#### 0. Setup and preparation
-- Create a GitHub repo with a name that makes sense (for example, `wikipedia-scraper`)
-- Create a virtual environment using [venv](https://docs.python.org/3/library/venv.html). Don't forget to add it to the `.gitignore` file.
-- **Read the docs from the [API](https://country-leaders.onrender.com/docs)!**
-- Copy the `wikipedia_scraper.ipynb` file from your fork into your new project repo.
-
-#### 1. Complete the first MVP (Notebook)
-- Activate the environment and install the required modules (e.g. request, and beautifulsoup). 
-- Complete the Notebook.
-
-#### 2a. A `scraper.py` module (Second MVP - OOP)
+#### A `scraper.py` module (Second MVP - OOP)
 
 - Code up a `WikipediaScraper` scraper object that allows you to structurally retrieve data from the API.
 
@@ -72,6 +58,6 @@ The object should contain at least these five methods:
 - `get_first_paragraph(wikipedia_url: str) -> str` returns the first paragraph (defined by the HTML tag `<p>`) with details about the leader
 - `to_json_file(filepath: str) -> None` stores the data structure into a JSON file
 
-#### 2b. A `main.py` script
+#### A `main.py` script
 
 Bundle everything together in a `main.py` file that calls the `WikipediaScraper` object and saves the data into a JSON file.
